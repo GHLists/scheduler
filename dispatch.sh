@@ -20,7 +20,7 @@ for i in "${!repos[@]}"; do
     -H "Authorization: Bearer $GITHUB_TOKEN" \
     -H "Accept: application/vnd.github+json" \
     -H "X-GitHub-Api-Version: 2022-11-28" \
-    -H "User-Agent: ghlists-dispatcher" \
+    -H "User-Agent: ghlists-scheduler" \
     "https://api.github.com/repos/GHLists/$repo/actions/workflows/$file/dispatches" \
     -d '{"ref":"main"}')
   if [ "$status" = "204" ]; then

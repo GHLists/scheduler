@@ -1,5 +1,5 @@
 {
-  "name": "ghlists-dispatcher",
+  "name": "ghlists-scheduler",
   "version": "1.0.0",
   "private": true,
   "type": "module",

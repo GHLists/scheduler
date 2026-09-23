@@ -1,4 +1,4 @@
-# ghlists-dispatcher
+# ghlists-scheduler
 
 Starts the hourly GHLists workflows through GitHub's `workflow_dispatch` API,
 without relying on GitHub's own cron scheduler. Deployed as a Cloudflare Worker
@@ -64,8 +64,8 @@ Local dispatch script (same calls the Worker makes):
 Deployed Worker (manual run):
 
 ```bash
-curl "https://ghlists-dispatcher.<your-subdomain>.workers.dev/?key=$DISPATCH_KEY"
-curl "https://ghlists-dispatcher.<your-subdomain>.workers.dev/?key=$DISPATCH_KEY&repo=new-pypi-packages"
+curl "https://ghlists-scheduler.<your-subdomain>.workers.dev/?key=$DISPATCH_KEY"
+curl "https://ghlists-scheduler.<your-subdomain>.workers.dev/?key=$DISPATCH_KEY&repo=new-pypi-packages"
 ```
 
 Logs: `npx wrangler tail`, or Workers → your Worker → Settings → Trigger Events.
@@ -81,3 +81,7 @@ Logs: `npx wrangler tail`, or Workers → your Worker → Settings → Trigger E
 - Fine-grained PATs expire; non-204 responses are logged (`wrangler tail`) so a
   broken token is visible.
 - Cron triggers are UTC and use Quartz-like syntax (weekdays `1=SUN … 7=SAT`).
+- Cloudflare's cron delivery can keep firing an old schedule after a trigger
+  change and ignore the new one. When that happens, deploy the Worker under a
+  new `name` in `wrangler.toml` (a new script gets a fresh trigger) and delete
+  the old Worker.

@@ -19,7 +19,7 @@ async function dispatch(env, workflows = WORKFLOWS) {
 						Authorization: `Bearer ${env.GITHUB_TOKEN}`,
 						Accept: 'application/vnd.github+json',
 						'X-GitHub-Api-Version': '2022-11-28',
-						'User-Agent': 'ghlists-dispatcher',
+						'User-Agent': 'ghlists-scheduler',
 					},
 					body: JSON.stringify({ ref: REF }),
 				});
