@@ -12,6 +12,7 @@ Repositories and workflows:
 | `GHLists/new-npm-packages` | `.github/workflows/hourly-new-packages.yml` |
 | `GHLists/new-pypi-packages` | `.github/workflows/hourly-new-packages.yml` |
 | `GHLists/new-maven-central-artifacts` | `.github/workflows/hourly-new-artifacts.yml` |
+| `GHLists/wikipedia-top-1000` | `.github/workflows/daily-top-1000.yml` (daily, 02:18 UTC) |
 
 ## Setup
 
@@ -24,7 +25,9 @@ npx wrangler deploy
 ```
 
 The cron trigger is defined in `wrangler.toml` and runs every hour at `:18`
-UTC. New or changed triggers can take up to ~15 minutes to propagate.
+UTC. The four `new-*` workflows are dispatched on every run; the daily
+`wikipedia-top-1000` job is only dispatched during the 02:18 UTC run. New or
+changed triggers can take up to ~15 minutes to propagate.
 
 ## CI deployment
 

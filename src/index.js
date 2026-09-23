@@ -6,6 +6,7 @@ const WORKFLOWS = [
 	{ repo: 'new-npm-packages', file: 'hourly-new-packages.yml' },
 	{ repo: 'new-pypi-packages', file: 'hourly-new-packages.yml' },
 	{ repo: 'new-maven-central-artifacts', file: 'hourly-new-artifacts.yml' },
+	{ repo: 'wikipedia-top-1000', file: 'daily-top-1000.yml', hour: 2 },
 ];
 
 async function dispatch(env, workflows = WORKFLOWS) {
@@ -46,7 +47,9 @@ async function dispatch(env, workflows = WORKFLOWS) {
 export default {
 	// Cloudflare Cron Trigger entrypoint.
 	async scheduled(controller, env, ctx) {
-		ctx.waitUntil(dispatch(env));
+		const hour = new Date(controller.scheduledTime).getUTCHours();
+		const due = WORKFLOWS.filter((item) => item.hour === undefined || item.hour === hour);
+		ctx.waitUntil(dispatch(env, due));
 	},
 
 	// Manual entrypoint: https://<worker>/?key=<DISPATCH_KEY> or ?key=...&repo=new-npm-packages
