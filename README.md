@@ -26,6 +26,24 @@ npx wrangler deploy
 The cron trigger is defined in `wrangler.toml` and runs every hour at `:07`
 UTC. New or changed triggers can take up to ~15 minutes to propagate.
 
+## CI deployment
+
+`.github/workflows/deploy.yml` deploys the Worker on every push to `main` that
+touches `src/`, `wrangler.toml`, `package.json`, `package-lock.json` or the
+workflow itself, and on manual dispatch. Configure these repository secrets
+first:
+
+| Secret | Value |
+| :----- | :---- |
+| `CLOUDFLARE_API_TOKEN` | API token with **Workers Scripts: Edit** |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID |
+| `WORKER_GITHUB_TOKEN` | fine-grained PAT with **Actions: Read and write** on the four GHLists repos (`GITHUB_TOKEN` is reserved by Actions, hence the name) |
+| `DISPATCH_KEY` | the key from `.dev.vars`, used for the Worker's manual `?key=` endpoint |
+
+The pipeline runs `wrangler deploy` and then pushes `GITHUB_TOKEN` and
+`DISPATCH_KEY` to the Worker as secrets. With the pipeline in place the manual
+`wrangler login`/`secret put`/`deploy` steps above are optional.
+
 ## Testing
 
 Local (uses `.dev.vars`, no deploy needed):
