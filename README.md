@@ -23,7 +23,7 @@ npx wrangler secret put DISPATCH_KEY    # see .dev.vars for the generated key
 npx wrangler deploy
 ```
 
-The cron trigger is defined in `wrangler.toml` and runs every hour at `:07`
+The cron trigger is defined in `wrangler.toml` and runs every hour at `:18`
 UTC. New or changed triggers can take up to ~15 minutes to propagate.
 
 ## CI deployment
