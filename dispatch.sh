@@ -8,8 +8,8 @@ set -a
 source .dev.vars
 set +a
 
-repos=(new-wikipedia-articles new-npm-packages new-pypi-packages new-maven-central-artifacts)
-files=(hourly-new-articles.yml hourly-new-packages.yml hourly-new-packages.yml hourly-new-artifacts.yml)
+repos=(new-wikipedia-articles new-npm-packages new-pypi-packages)
+files=(hourly-new-articles.yml hourly-new-packages.yml hourly-new-packages.yml)
 
 failed=0
 for i in "${!repos[@]}"; do

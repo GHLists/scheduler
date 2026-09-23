@@ -5,7 +5,6 @@ const WORKFLOWS = [
 	{ repo: 'new-wikipedia-articles', file: 'hourly-new-articles.yml' },
 	{ repo: 'new-npm-packages', file: 'hourly-new-packages.yml' },
 	{ repo: 'new-pypi-packages', file: 'hourly-new-packages.yml' },
-	{ repo: 'new-maven-central-artifacts', file: 'hourly-new-artifacts.yml' },
 	{ repo: 'wikipedia-top-1000', file: 'daily-top-1000.yml', hour: 2 },
 ];
 
