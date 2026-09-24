@@ -5,6 +5,12 @@ const WORKFLOWS = [
 	{ repo: 'new-wikipedia-articles', file: 'hourly-new-articles.yml' },
 	{ repo: 'new-npm-packages', file: 'hourly-new-packages.yml' },
 	{ repo: 'new-pypi-packages', file: 'hourly-new-packages.yml' },
+	{ repo: 'new-crates', file: 'hourly-new-crates.yml' },
+	{ repo: 'new-cves', file: 'hourly-new-cves.yml' },
+	{ repo: 'new-flathub-apps', file: 'hourly-new-flathub-apps.yml' },
+	{ repo: 'new-go-modules', file: 'hourly-new-go-modules.yml' },
+	{ repo: 'new-huggingface-models', file: 'hourly-new-huggingface-models.yml' },
+	{ repo: 'new-openrouter-models', file: 'hourly-new-openrouter-models.yml' },
 	{ repo: 'wikipedia-top-1000', file: 'daily-top-1000.yml', hour: 2 },
 ];
 

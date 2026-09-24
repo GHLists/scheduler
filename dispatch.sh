@@ -8,8 +8,8 @@ set -a
 source .dev.vars
 set +a
 
-repos=(new-wikipedia-articles new-npm-packages new-pypi-packages)
-files=(hourly-new-articles.yml hourly-new-packages.yml hourly-new-packages.yml)
+repos=(new-wikipedia-articles new-npm-packages new-pypi-packages new-crates new-cves new-flathub-apps new-go-modules new-huggingface-models new-openrouter-models)
+files=(hourly-new-articles.yml hourly-new-packages.yml hourly-new-packages.yml hourly-new-crates.yml hourly-new-cves.yml hourly-new-flathub-apps.yml hourly-new-go-modules.yml hourly-new-huggingface-models.yml hourly-new-openrouter-models.yml)
 
 failed=0
 for i in "${!repos[@]}"; do
