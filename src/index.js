@@ -15,6 +15,13 @@ const WORKFLOWS = [
 	{ repo: 'new-huggingface-datasets', file: 'hourly-new-huggingface-datasets.yml' },
 	{ repo: 'new-mcp-servers', file: 'hourly-new-mcp-servers.yml' },
 	{ repo: 'new-vscode-extensions', file: 'hourly-new-vscode-extensions.yml' },
+	{ repo: 'new-aur-packages', file: 'hourly-new-aur-packages.yml' },
+	{ repo: 'new-firefox-addons', file: 'hourly-new-firefox-addons.yml' },
+	{ repo: 'new-helm-charts', file: 'hourly-new-helm-charts.yml' },
+	{ repo: 'new-nuget-packages', file: 'hourly-new-nuget-packages.yml' },
+	{ repo: 'new-packagist-packages', file: 'hourly-new-packagist-packages.yml' },
+	{ repo: 'new-terraform-providers', file: 'hourly-new-terraform-providers.yml' },
+	{ repo: 'new-deno-modules', file: 'hourly-new-deno-modules.yml' },
 	{ repo: 'wikipedia-top-1000', file: 'daily-top-1000.yml', hour: 2 },
 ];
 

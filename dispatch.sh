@@ -8,8 +8,8 @@ set -a
 source .dev.vars
 set +a
 
-repos=(new-wikipedia-articles new-npm-packages new-pypi-packages new-crates new-cves new-flathub-apps new-go-modules new-huggingface-models new-openrouter-models new-rubygems new-huggingface-datasets new-mcp-servers new-vscode-extensions)
-files=(hourly-new-articles.yml hourly-new-packages.yml hourly-new-packages.yml hourly-new-crates.yml hourly-new-cves.yml hourly-new-flathub-apps.yml hourly-new-go-modules.yml hourly-new-huggingface-models.yml hourly-new-openrouter-models.yml hourly-new-rubygems.yml hourly-new-huggingface-datasets.yml hourly-new-mcp-servers.yml hourly-new-vscode-extensions.yml)
+repos=(new-wikipedia-articles new-npm-packages new-pypi-packages new-crates new-cves new-flathub-apps new-go-modules new-huggingface-models new-openrouter-models new-rubygems new-huggingface-datasets new-mcp-servers new-vscode-extensions new-aur-packages new-firefox-addons new-helm-charts new-nuget-packages new-packagist-packages new-terraform-providers new-deno-modules)
+files=(hourly-new-articles.yml hourly-new-packages.yml hourly-new-packages.yml hourly-new-crates.yml hourly-new-cves.yml hourly-new-flathub-apps.yml hourly-new-go-modules.yml hourly-new-huggingface-models.yml hourly-new-openrouter-models.yml hourly-new-rubygems.yml hourly-new-huggingface-datasets.yml hourly-new-mcp-servers.yml hourly-new-vscode-extensions.yml hourly-new-aur-packages.yml hourly-new-firefox-addons.yml hourly-new-helm-charts.yml hourly-new-nuget-packages.yml hourly-new-packagist-packages.yml hourly-new-terraform-providers.yml hourly-new-deno-modules.yml)
 
 failed=0
 for i in "${!repos[@]}"; do

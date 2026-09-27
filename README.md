@@ -21,6 +21,13 @@ Repositories and workflows:
 | `GHLists/new-huggingface-datasets` | `.github/workflows/hourly-new-huggingface-datasets.yml` |
 | `GHLists/new-mcp-servers` | `.github/workflows/hourly-new-mcp-servers.yml` |
 | `GHLists/new-vscode-extensions` | `.github/workflows/hourly-new-vscode-extensions.yml` |
+| `GHLists/new-aur-packages` | `.github/workflows/hourly-new-aur-packages.yml` |
+| `GHLists/new-firefox-addons` | `.github/workflows/hourly-new-firefox-addons.yml` |
+| `GHLists/new-helm-charts` | `.github/workflows/hourly-new-helm-charts.yml` |
+| `GHLists/new-nuget-packages` | `.github/workflows/hourly-new-nuget-packages.yml` |
+| `GHLists/new-packagist-packages` | `.github/workflows/hourly-new-packagist-packages.yml` |
+| `GHLists/new-terraform-providers` | `.github/workflows/hourly-new-terraform-providers.yml` |
+| `GHLists/new-deno-modules` | `.github/workflows/hourly-new-deno-modules.yml` |
 | `GHLists/wikipedia-top-1000` | `.github/workflows/daily-top-1000.yml` (daily, 02:18 UTC) |
 
 ## Setup
