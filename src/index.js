@@ -11,6 +11,10 @@ const WORKFLOWS = [
 	{ repo: 'new-go-modules', file: 'hourly-new-go-modules.yml' },
 	{ repo: 'new-huggingface-models', file: 'hourly-new-huggingface-models.yml' },
 	{ repo: 'new-openrouter-models', file: 'hourly-new-openrouter-models.yml' },
+	{ repo: 'new-rubygems', file: 'hourly-new-rubygems.yml' },
+	{ repo: 'new-hf-datasets', file: 'hourly-new-hf-datasets.yml' },
+	{ repo: 'new-mcp-servers', file: 'hourly-new-mcp-servers.yml' },
+	{ repo: 'new-vscode-extensions', file: 'hourly-new-vscode-extensions.yml' },
 	{ repo: 'wikipedia-top-1000', file: 'daily-top-1000.yml', hour: 2 },
 ];
 
