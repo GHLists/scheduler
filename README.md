@@ -18,7 +18,7 @@ Repositories and workflows:
 | `GHLists/new-huggingface-models` | `.github/workflows/hourly-new-huggingface-models.yml` |
 | `GHLists/new-openrouter-models` | `.github/workflows/hourly-new-openrouter-models.yml` |
 | `GHLists/new-rubygems` | `.github/workflows/hourly-new-rubygems.yml` |
-| `GHLists/new-hf-datasets` | `.github/workflows/hourly-new-hf-datasets.yml` |
+| `GHLists/new-huggingface-datasets` | `.github/workflows/hourly-new-huggingface-datasets.yml` |
 | `GHLists/new-mcp-servers` | `.github/workflows/hourly-new-mcp-servers.yml` |
 | `GHLists/new-vscode-extensions` | `.github/workflows/hourly-new-vscode-extensions.yml` |
 | `GHLists/wikipedia-top-1000` | `.github/workflows/daily-top-1000.yml` (daily, 02:18 UTC) |
